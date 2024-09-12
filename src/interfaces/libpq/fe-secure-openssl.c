@@ -20,6 +20,7 @@
  *-------------------------------------------------------------------------
  */
 
+#include "pg_config.h"
 #include "postgres_fe.h"
 
 #include <signal.h>
@@ -1521,13 +1522,13 @@ open_client_SSL(PGconn *conn)
 							 * codes listed here, but a hint about protocol
 							 * versions seems like it's appropriate for all.
 							 */
-						case SSL_R_NO_PROTOCOLS_AVAILABLE:
+						//case SSL_R_NO_PROTOCOLS_AVAILABLE:
 						case SSL_R_UNSUPPORTED_PROTOCOL:
-						case SSL_R_BAD_PROTOCOL_VERSION_NUMBER:
+						//case SSL_R_BAD_PROTOCOL_VERSION_NUMBER:
 						case SSL_R_UNKNOWN_PROTOCOL:
 						case SSL_R_UNKNOWN_SSL_VERSION:
-						case SSL_R_UNSUPPORTED_SSL_VERSION:
-						case SSL_R_WRONG_SSL_VERSION:
+						//case SSL_R_UNSUPPORTED_SSL_VERSION:
+						//case SSL_R_WRONG_SSL_VERSION:
 						case SSL_R_WRONG_VERSION_NUMBER:
 						case SSL_R_TLSV1_ALERT_PROTOCOL_VERSION:
 #ifdef SSL_R_VERSION_TOO_HIGH
