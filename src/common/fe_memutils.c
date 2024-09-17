@@ -12,6 +12,7 @@
  *
  *-------------------------------------------------------------------------
  */
+#include "pg_config.h"
 
 #ifndef FRONTEND
 #error "This file is not expected to be compiled for backend code"
