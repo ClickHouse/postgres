@@ -19,6 +19,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#if !OS_DARWIN
+
 #include "c.h"
 
 
@@ -58,3 +60,5 @@ strlcat(char *dst, const char *src, size_t siz)
 
 	return (dlen + (s - src));	/* count does not include NUL */
 }
+
+#endif
